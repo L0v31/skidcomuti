@@ -1,5 +1,4 @@
 
-    
     repeat wait() until game.Players
     repeat wait() until game.Players.LocalPlayer
     repeat wait() until game.ReplicatedStorage
