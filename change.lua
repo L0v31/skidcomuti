@@ -7251,7 +7251,7 @@ local FullMoon = MirageSTCompleSection:AddLabel({
     }
     
     EspSection:AddToggle{
-        Name = "No Soru Cool Down",
+        Name = "Infinit Soru",
         Flag = "Infinit_Soru",
         Value = _G.Settings.Infinit_Soru,
         Callback  = function(value)
@@ -7781,8 +7781,8 @@ local FullMoon = MirageSTCompleSection:AddLabel({
     end
     
     LawDungeonSection:AddDropdown({
-        Name = "Chose Weapon",
-        Flag = Chose_Weapon",
+        Name = "Select Weapon",
+        Flag = "Select_Weapon",
         List = WeaponLaw,
         Value = _G.Settings.Select_Weapon_Law_Raid,
         Callback = function(value)
@@ -8362,7 +8362,7 @@ end)
     })
     
     RacefragmentSection:AddButton({
-        Name = "Purchase Cyborg",
+        Name = "Buy Cyborg",
         Callback = function()
             local args = {
                 [1] = "CyborgTrainer",
@@ -8453,7 +8453,7 @@ end)
     
     local OpenMenuSection = MiscTab:CreateSection({
         Name = "Open Menu",
-        Side = "F4"
+        Side = "Right"
     })
     
     OpenMenuSection:AddButton({
@@ -8480,7 +8480,7 @@ end)
         Name = "Devil Fruit Shop",
         Callback = function()
             local args = {
-                [1] = "GetFruit=Click"
+                [1] = "GetFruits"
             }
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
             game.Players.localPlayer.PlayerGui.Main.FruitShop.Visible = true
@@ -8543,7 +8543,7 @@ end)
     })
     
     MainMiscSection:AddButton({
-        Name = "God Fps?",
+        Name = "FPS Boost",
         Callback = function()
             _G.FPS_Boost = true
         end
